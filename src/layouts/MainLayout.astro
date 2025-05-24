@@ -1,24 +1,69 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
-const { title = "Portfolio" } = Astro.props;
+export interface Props {
+  title?: string;
+}
+const { title = "My Portfolio" } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>{title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body>
-    <Navbar />
-    <div class="site-bg">
-      <main class="main-content">
-        <slot />
-      </main>
+    <header>
+      <nav class="navbar-outer">
+        <div class="navbar-inner">
+          <a href="/" class="logo">MyLogo</a>
+          <div class="nav-links">
+            <a class="nav-link" href="/">Portfolio</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <slot />
+    </main>
+
+    <footer class="footer-outer">
+      <div class="footer-inner">
+        <span>© {new Date().getFullYear()} My Portfolio</span>
+        <span>
+          <a class="footer-link" href="https://github.com/yourusername" target="_blank">GitHub</a>
+          <a class="footer-link" href="/contact">Contact</a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Theme Picker -->
+    <div id="theme-picker">
+      <label for="theme-select" style="display:none">Theme</label>
+      <select id="theme-select">
+        <option value="light" style="background:#f1f3f7; color:#171923;">Light</option>
+        <option value="dark" style="background:#151823; color:#f1f3f7;">Dark</option>
+        <option value="hot" style="background:#241116; color:#ffeaea;">Hot</option>
+      </select>
     </div>
-    <Footer />
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const root = document.documentElement;
+        const select = document.getElementById('theme-select');
+        if (select && select instanceof HTMLSelectElement) {
+          const saved = localStorage.getItem('theme') || 'light';
+          root.setAttribute('data-theme', saved);
+          select.value = saved;
+          select.addEventListener('change', () => {
+            root.setAttribute('data-theme', select.value);
+            localStorage.setItem('theme', select.value);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
