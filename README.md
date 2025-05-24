@@ -1,47 +1,63 @@
-# Astro Starter Kit: Minimal
+# Astro Portfolio Boilerplate
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A clean, modern portfolio website starter built with [Astro](https://astro.build/).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+This boilerplate is designed for designers, developers, and creatives who want a beautiful, customizable, and easy-to-update portfolio without extra dependencies.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 🚀 Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- Astro-only: No frameworks or build tools beyond Astro itself. Just pure `.astro`, CSS, and JS.
+- Modern layout: Responsive design with a minimalist navbar, centered logo, and clear section structure.
+- Portfolio, About, Contact pages: Ready to showcase your projects, tell your story, and let people reach out.
+- Customizable theme picker: Instantly switch between Light, Dark, and Hot (red) themes. Remembers your choice.
+- Persistent theme: User theme is saved via `localStorage`.
+- Full CSS variables: Easy theming and style changes.
+- Accessible and semantic HTML: Built with accessibility in mind.
+- Ready for Netlify or Vercel: Easy to deploy, zero config needed.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+---
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## ✏️ How to Use & Customize
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### 1. Installation
 
-Any static assets, like images, can be placed in the `public/` directory.
+npx create-astro@latest  
+# or clone this repo  
+git clone https://github.com/yourusername/astro-portfolio-boilerplate.git  
+cd astro-portfolio-boilerplate  
+npm install
 
-## 🧞 Commands
+### 2. Development
 
-All commands are run from the root of the project, from a terminal:
+npm run dev
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Visit http://localhost:4321 to see your site.
 
-## 👀 Want to learn more?
+### 3. Updating Your Content
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Logo:** Edit in `src/layouts/MainLayout.astro` (`<a href="/" class="logo">MyLogo</a>`)
+- **Navbar:** Links are in `MainLayout.astro`. You can rename or add more as needed.
+- **Portfolio items:** Edit your projects in `src/pages/index.astro`
+- **About page:** Update your bio, skills, and profile photo in `src/pages/about.astro`
+- **Contact info:** Update your email, phone, location, and social links in `src/pages/contact.astro`
+- **Theme colors:** Edit theme variables at the top of `src/styles/global.css` for your own palette or add more themes.
+- **Deploy:** Push to GitHub and connect to Netlify or Vercel.
+
+### 4. Theme Picker
+
+- Switch themes with the dropdown in the top right.
+- To add more themes, extend the `:root[data-theme="your-theme"]` CSS block in `global.css` and add an `<option>` in the picker.
+
+---
+
+## ☕️ Support
+
+If you enjoy this template or want to support future updates:
+
+[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/drubino8)
+
+---
+
+**Made with Astro • Designed for creators**
