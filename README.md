@@ -23,9 +23,9 @@ This boilerplate is designed for designers, developers, and creatives who want a
 
 ### 1. Installation
 
-npx create-astro@latest  
+npm create astro@latest  
 # or clone this repo  
-git clone https://github.com/yourusername/astro-portfolio-boilerplate.git  
+git clone https://github.com/drubino8/astro-web-boilerplate.git  
 cd astro-portfolio-boilerplate  
 npm install
 
