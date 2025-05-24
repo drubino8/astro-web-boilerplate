@@ -1,0 +1,45 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Contact">
+  <section class="contact-details-section">
+    <h1>Contact</h1>
+    <p>
+      Reach out for project inquiries, collaborations, or just to say hello.
+    </p>
+    <ul class="contact-details-list">
+      <li><strong>Email:</strong> <a href="mailto:john.doe@email.com">john.doe@email.com</a></li>
+      <li><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+      <li><strong>Location:</strong> Seattle, WA</li>
+    </ul>
+    <div class="contact-social">
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </section>
+  <section class="contact-form-section-contained">
+    <h2>Want to get in touch?<br />Drop me a line!</h2>
+    <form class="contact-form-contained" name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" />
+      <div class="contact-fields-outer">
+        <div class="contact-fields-contained">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required autocomplete="name" placeholder="Enter your name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="Enter your email" />
+          </div>
+        </div>
+        <div class="form-group form-group-message">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="contact-submit-contained">Submit</button>
+    </form>
+  </section>
+</MainLayout>

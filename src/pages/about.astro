@@ -1,0 +1,50 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="About">
+  <section class="about-profile">
+    <img
+      src="https://randomuser.me/api/portraits/men/32.jpg"
+      alt="Portrait of John Doe"
+      class="about-photo"
+      width="160"
+      height="160"
+      loading="lazy"
+    />
+    <div>
+      <h1 class="about-name">John Doe</h1>
+      <h2 class="about-title">Web Designer &amp; Developer</h2>
+      <p class="about-bio">
+        Hello! I’m John, a passionate web designer and developer based in Seattle. I love building sleek, accessible, and high-performance websites that help brands and people shine online.
+        <br /><br />
+        My approach blends visual creativity with solid code, ensuring each project is both beautiful and functional.
+      </p>
+    </div>
+  </section>
+  
+  <section class="about-columns">
+    <div>
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML &amp; CSS</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Astro</li>
+        <li>WordPress</li>
+        <li>Figma</li>
+        <li>UI/UX Design</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Interests</h3>
+      <ul>
+        <li>Typography &amp; Branding</li>
+        <li>Game Design</li>
+        <li>Open Source</li>
+        <li>Vinyl Record Collecting</li>
+        <li>Hockey &amp; Basketball</li>
+        <li>Learning New Frameworks</li>
+      </ul>
+    </div>
+  </section>
+</MainLayout>

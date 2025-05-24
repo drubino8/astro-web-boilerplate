@@ -1,16 +1,31 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Portfolio">
+  <h1>My Work</h1>
+  <p>Here’s a collection of sample projects to showcase your work. Replace these with your real projects!</p>
+
+  <section class="portfolio-grid">
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Project One" />
+      <h2>Project One</h2>
+      <p>A modern website redesign for a local business. Features responsive layouts and a custom CMS.</p>
+    </div>
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Project Two" />
+      <h2>Project Two</h2>
+      <p>An interactive portfolio site built using Astro. Includes animations and dynamic content.</p>
+    </div>
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Project Three" />
+      <h2>Project Three</h2>
+      <p>A clean and minimal landing page template, perfect for startups and product launches.</p>
+    </div>
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Project Four" />
+      <h2>Project Four</h2>
+      <p>A fun game UI concept, showing off design skills for digital products and entertainment brands.</p>
+    </div>
+  </section>
+</MainLayout>
