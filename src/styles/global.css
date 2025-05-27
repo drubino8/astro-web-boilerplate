@@ -497,3 +497,10 @@ ul {
 main {
   flex: 1;
 }
+
+@media (max-width: 1300px) {
+  #theme-picker {
+    top: 4rem; /* Moves it below the navbar */
+    right: 1rem;
+  }
+}
