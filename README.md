@@ -9,9 +9,9 @@ This boilerplate is designed for designers, developers, and creatives who want a
 ## 🚀 Features
 
 - Astro-only: No frameworks or build tools beyond Astro itself. Just pure `.astro`, CSS, and JS.
-- Modern layout: Responsive design with a minimalist navbar, centered logo, and clear section structure.
+- Modern layout: Responsive design with a minimalist navbar, left-aligned logo, and clear section structure.
 - Portfolio, About, Contact pages: Ready to showcase your projects, tell your story, and let people reach out.
-- Customizable theme picker: Instantly switch between Light, Dark, and Hot (red) themes. Remembers your choice.
+- Customizable theme picker: Instantly switch between Light, Dark, and Hot (red) themes. Remembers your choice. You can create and add your own themes as well!
 - Persistent theme: User theme is saved via `localStorage`.
 - Full CSS variables: Easy theming and style changes.
 - Accessible and semantic HTML: Built with accessibility in mind.
